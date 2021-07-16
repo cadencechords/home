@@ -1,0 +1,10 @@
+.typewriter {
+    border-right: 2px solid gray;
+    padding-right: 5px;
+    animation: blink-caret .9s  infinite;
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent;}
+    50% {border-color: gray;}
+}

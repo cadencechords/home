@@ -5,8 +5,34 @@ import GlobeIcon from "@heroicons/react/outline/GlobeIcon";
 import UserGroupIcon from "@heroicons/react/outline/UserGroupIcon";
 import Description from "../components/Description";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+	const [transformationCounter, setTransformationCounter] = useState(0);
+	const [iterationCounter, setIterationCounter] = useState(0);
+	const [typewriterChords, setTypewriterChords] = useState("  D                 G         D");
+
+	useEffect(() => {
+		const typewriterInterval = setInterval(() => {
+			if (transformationCounter < TRANSFORMATIONS.length) {
+				let transformation = TRANSFORMATIONS[transformationCounter];
+				let newChords = transformation.transform(typewriterChords);
+				setTypewriterChords(newChords);
+
+				setIterationCounter((currentIteration) => currentIteration + 1);
+
+				if (iterationCounter === transformation.iterations - 1) {
+					setTransformationCounter((currentTransformation) => currentTransformation + 1);
+					setIterationCounter(0);
+				}
+			} else {
+				clearInterval(typewriterInterval);
+			}
+		}, 100);
+
+		return () => clearInterval(typewriterInterval);
+	}, [iterationCounter]);
+
 	return (
 		<div>
 			<Head>
@@ -27,9 +53,10 @@ export default function Home() {
 						with your band members.
 					</p>
 					<code className="col-span-2 md:col-span-1 hidden md:block">
-						<div className="whitespace-pre text-blue-600 font-semibold">
-							{" D                   G         D"}
-						</div>
+						<span className="whitespace-pre text-blue-600 font-semibold typewriter">
+							{typewriterChords}
+						</span>
+						<br />
 						Amazing grace, how sweet the sound <br />
 						<div className="whitespace-pre text-blue-600 font-semibold">
 							{"     Bm        E       Asus    A"}
@@ -58,7 +85,7 @@ export default function Home() {
 						<UserGroupIcon className="h-8 w-8 mb-2 text-blue-600" />
 						<h3 className="font-semibold text-lg text-gray-800 mb-3">Built for teams</h3>
 						<Description>
-							Musicians are often a part more than one team. Easily switch between your teams and
+							Musicians are often a part of more than one team. Easily switch between your teams and
 							keep your resources de-cluttered.
 						</Description>
 					</div>
@@ -83,4 +110,74 @@ export default function Home() {
 			</div>
 		</div>
 	);
+}
+
+const TRANSFORMATIONS = [
+	wait(15),
+	backspace(10),
+	wait(5),
+	append("/"),
+	append("D"),
+	wait(2),
+	append(" ", 8),
+	append("D"),
+	wait(20),
+	backspace(22),
+	wait(2),
+	append("D"),
+	wait(3),
+	append("7"),
+	append(" ", 9),
+	wait(1),
+	append("G"),
+	append(" ", 8),
+	wait(2),
+	append("D"),
+	wait(20),
+	backspace(30),
+	wait(4),
+	append("B"),
+	append("m"),
+	append(" ", 6),
+	wait(2),
+	append("G"),
+	wait(2),
+	append(" ", 11),
+	wait(3),
+	append("D"),
+	append(" ", 8),
+	wait(2),
+	append("A"),
+	wait(1),
+	append("/"),
+	append("C"),
+	wait(1),
+	append("#"),
+];
+
+function wait(iterationsToWait) {
+	return {
+		iterations: iterationsToWait,
+		transform: function (text) {
+			return text;
+		},
+	};
+}
+
+function append(textToAppend, iterationsToAppend = 1) {
+	return {
+		iterations: iterationsToAppend,
+		transform: function (text) {
+			return text + textToAppend;
+		},
+	};
+}
+
+function backspace(iterationsToBackspace) {
+	return {
+		iterations: iterationsToBackspace,
+		transform: function (text) {
+			return text.substring(0, text.length - 1);
+		},
+	};
 }
