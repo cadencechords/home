@@ -69,8 +69,8 @@ export default function Home() {
 						<MusicNoteIcon className="h-8 w-8 mb-2 text-blue-600" />
 						<h3 className="font-semibold text-lg text-gray-800">Designed for musicians</h3>
 						<Description>
-							Cadence comes with all tools a musician needs: built-in song editor, metronome,
-							transposer and more!
+							Cadence comes with all tools a musician needs: built-in song editor, set presenter and
+							PDF generator!
 						</Description>
 					</div>
 					<div className="col-span-3 md:col-span-1">
