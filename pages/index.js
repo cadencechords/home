@@ -1,11 +1,12 @@
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
 import MusicNoteIcon from "@heroicons/react/outline/MusicNoteIcon";
 import GlobeIcon from "@heroicons/react/outline/GlobeIcon";
 import UserGroupIcon from "@heroicons/react/outline/UserGroupIcon";
+
+import Navbar from "../components/Navbar";
 import Description from "../components/Description";
-import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function Home() {
 	const [transformationCounter, setTransformationCounter] = useState(0);
