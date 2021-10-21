@@ -1,10 +1,29 @@
 .typewriter {
-    border-right: 2px solid gray;
-    padding-right: 5px;
-    animation: blink-caret .9s  infinite;
+	border-right: 2px solid gray;
+	padding-right: 5px;
+	animation: blink-caret 0.9s infinite;
 }
 
 @keyframes blink-caret {
-    from, to {border-color: transparent;}
-    50% {border-color: gray;}
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: gray;
+	}
+}
+
+body {
+	font-family: "Inter", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.dots {
+	background: linear-gradient(90deg, white, 21px, transparent 1%) center,
+		linear-gradient(white 21px, transparent 1%) center, gray;
+	background-size: 22px 22px;
 }

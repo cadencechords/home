@@ -1,12 +1,22 @@
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import Head from "next/head";
-import MusicNoteIcon from "@heroicons/react/outline/MusicNoteIcon";
-import GlobeIcon from "@heroicons/react/outline/GlobeIcon";
-import UserGroupIcon from "@heroicons/react/outline/UserGroupIcon";
+import { useEffect, useState } from "react";
 
-import Navbar from "../components/Navbar";
+import Button from "../components/Button";
+import ContactForm from "../components/ContactForm";
 import Description from "../components/Description";
+import Features from "../components/Features";
+import GlobeIcon from "@heroicons/react/outline/GlobeIcon";
+import Head from "next/head";
+import Heading from "../components/Heading";
+import Image from "next/image";
+import Input from "../components/Input";
+import Link from "next/link";
+import MusicNoteIcon from "@heroicons/react/outline/MusicNoteIcon";
+import Navbar from "../components/Navbar";
+import PricingOptions from "../components/PricingOptions";
+import Section from "../components/Section";
+import Subtext from "../components/Subtext";
+import UserGroupIcon from "@heroicons/react/outline/UserGroupIcon";
+import screenshotSongsPage from "../public/screenshot_of_songs_page.JPG";
 
 export default function Home() {
 	const [transformationCounter, setTransformationCounter] = useState(0);
@@ -40,11 +50,61 @@ export default function Home() {
 				<title>Cadence</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<div className="mx-auto max-w-7xl px-4">
+				<Navbar />
 
-			<Navbar />
+				<Section>
+					<div className="grid grid-cols-2 gap-8 items-center">
+						<div className="col-span-2 lg:col-span-1">
+							<Button variant="light" className="text-sm">
+								WHAT'S NEW
+							</Button>
+							<Heading className="my-6">Song management for growing teams</Heading>
+							<Subtext className="text-xl mb-6">
+								Digitize your chord sheets and access them from any device. Easily share and
+								collaborate with your band members.
+							</Subtext>
+							<div className="flex items-center">
+								<Input placeholder={"Email"} className="mr-4 flex-grow" />
+								<Button className="mr-4">Sign up</Button>
+							</div>
+						</div>
+						<div className="relative lg:h-[800px] col-span-2 lg:col-span-1">
+							<div className="ml-auto bg-gray-50 rounded-lg w-96 h-full hidden lg:block"></div>
+							<div className="shadow-lg rounded-md w-full lg:absolute lg:top-10 lg:mr-3">
+								<Image src={screenshotSongsPage} className="rounded-md w-full" />
+							</div>
+						</div>
+					</div>
+				</Section>
 
-			<div className="mx-auto container max-w-4xl px-2 mb-10">
-				<h1 className="text-3xl pb-3 font-semibold mt-20 mx-auto container max-w-4xl px-2">
+				<Section id="features">
+					<Heading size="md" className="text-center mb-8">
+						All-in-one Platform
+					</Heading>
+					<Features />
+				</Section>
+
+				<Section id="pricing">
+					<Heading className="mb-6">Pricing plans for teams of all sizes</Heading>
+					<Subtext className="text-xl max-w-4xl mb-16">
+						Choose an affordable plan that's packed with the best features for running rehearsals
+						and performing your songs, saving you time in planning and rehearsals.
+					</Subtext>
+					<PricingOptions />
+				</Section>
+
+				<Section id="contact">
+					<div className="grid grid-cols-2 gap-8 grid-">
+						<Heading className="col-span-2 lg:col-span-1 order-1 lg:order-2" size="md">
+							Send us a message
+						</Heading>
+						<ContactForm className="col-span-2 lg:col-span-1 order-2 lg:order-1" />
+					</div>
+				</Section>
+			</div>
+			{/* <div className="mx-auto container max-w-6xl px-2 mb-10">
+				<h1 className="text-3xl pb-3 font-semibold mt-20 mx-auto container max-6xl px-2">
 					Welcome to Cadence.
 				</h1>
 				<h2 className="text-2xl font-semibold text-blue-700 pb-4">Organize your music.</h2>
@@ -108,7 +168,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
