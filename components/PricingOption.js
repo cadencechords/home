@@ -5,7 +5,7 @@ import Subtext from "./Subtext";
 
 export default function PricingOption({ plan, buttonVariant }) {
 	return (
-		<div className="rounded-lg border border-gray-300 p-6 flex flex-col col-span-2 md:col-span-1">
+		<div className="rounded-lg border-gray-300 hover:border-blue-600 border-2 transition-colors p-6 flex flex-col col-span-2 md:col-span-1">
 			<div className="text-2xl font-semibold mb-6">{plan.name}</div>
 			<div className="mb-6">
 				<span className="text-4xl font-bold">{plan.price}</span>
