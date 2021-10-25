@@ -30,7 +30,7 @@ export default function ContactForm({ className }) {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: form,
+				body: JSON.stringify(form),
 			});
 			setForm({});
 			setLoading(false);
