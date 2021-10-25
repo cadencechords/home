@@ -8,7 +8,7 @@ export default function Navbar() {
 		<nav>
 			<div className="flex bg-white justify-between items-center container p-3 border-b min-w-full">
 				<Image src={icon} alt="Cadence icon" height={60} width={60} />
-				<div>
+				<div className="hidden md:block">
 					<Link href="#features">
 						<Button variant="text" color="gray" className="mr-2">
 							Features

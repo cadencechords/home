@@ -19,7 +19,7 @@ const starter = {
 
 const pro = {
 	name: "Pro Plan",
-	price: "$20",
+	price: "$10",
 	recurrence: "/month",
 	features: [
 		"Multiple team members",

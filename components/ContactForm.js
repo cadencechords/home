@@ -1,13 +1,51 @@
+import { useEffect, useState } from "react";
+
 import Button from "./Button";
 import Input from "./Input";
 import Textarea from "./Textarea";
-import { useState } from "react";
 
 export default function ContactForm({ className }) {
 	const [form, setForm] = useState({});
+	const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+	const [successTimeout, setSuccessTimeout] = useState();
+	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		return () => clearTimeout(successTimeout);
+	}, []);
 
 	function handleFieldChange(field, value) {
 		setForm((currentForm) => ({ ...currentForm, [field]: value }));
+	}
+
+	function isValid() {
+		return form.first_name && form.email && form.message;
+	}
+
+	async function handleSubmitForm() {
+		try {
+			setLoading(true);
+			await fetch(`${process.env.NEXT_PUBLIC_API_URL}/contact_submissions`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+			setForm({});
+			setLoading(false);
+			displaySuccessMessage();
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+	function displaySuccessMessage() {
+		setShowSuccessMessage(true);
+		let timeout = setTimeout(() => {
+			setShowSuccessMessage(false);
+		}, 5000);
+		clearTimeout(successTimeout);
+		setSuccessTimeout(timeout);
 	}
 
 	return (
@@ -34,11 +72,23 @@ export default function ContactForm({ className }) {
 				<Textarea
 					placeholder="How can we help you?"
 					className="col-span-2"
-					value={form.description}
-					onChange={(value) => handleFieldChange("description", value)}
+					value={form.message}
+					onChange={(value) => handleFieldChange("message", value)}
 				/>
 			</div>
-			<Button className="w-full lg:w-auto">Submit</Button>
+			<Button
+				className="w-full lg:w-auto"
+				disabled={!isValid()}
+				onClick={handleSubmitForm}
+				loading={loading}
+			>
+				Submit
+			</Button>
+			{showSuccessMessage && (
+				<div className="mt-4 p-3 rounded-md bg-green-100 text-green-800 font-medium	">
+					Your submission was received!
+				</div>
+			)}
 		</div>
 	);
 }

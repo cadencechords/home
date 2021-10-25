@@ -1,5 +1,6 @@
 import Button from "./Button";
 import CheckIcon from "@heroicons/react/outline/CheckIcon";
+import Link from "next/link";
 import Subtext from "./Subtext";
 
 export default function PricingOption({ plan, buttonVariant }) {
@@ -19,9 +20,11 @@ export default function PricingOption({ plan, buttonVariant }) {
 					</div>
 				))}
 			</div>
-			<Button variant={buttonVariant} full>
-				Get started
-			</Button>
+			<Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
+				<Button variant={buttonVariant} full>
+					Get started
+				</Button>
+			</Link>
 		</div>
 	);
 }

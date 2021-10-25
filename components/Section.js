@@ -1,7 +1,11 @@
-export default function Section({ children, id }) {
+export default function Section({ children, id, className }) {
 	return (
-		<section className="my-44" id={id}>
+		<section className={`${className} my-44`} id={id}>
 			{children}
 		</section>
 	);
 }
+
+Section.defaultProps = {
+	className: "",
+};

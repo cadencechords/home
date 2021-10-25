@@ -1,5 +1,16 @@
-export default function Button({ variant, onClick, full, className, color, children }) {
-	let props = { variant, onClick, full, className, color, children };
+import PulseLoader from "react-spinners/PulseLoader";
+
+export default function Button({
+	variant,
+	onClick,
+	full,
+	className,
+	color,
+	disabled,
+	loading,
+	children,
+}) {
+	let props = { variant, onClick, full, className, color, children, disabled, loading };
 
 	if (variant === "light") {
 		return <LightButton {...props}>{children}</LightButton>;
@@ -24,16 +35,19 @@ function LightButton({ full, onClick, children, className, color }) {
 	);
 }
 
-function SolidButton({ full, onClick, children, className, color }) {
+function SolidButton({ full, onClick, children, className, color, disabled, loading }) {
 	return (
 		<button
 			className={
 				`px-3 py-2 rounded-md font-medium whitespace-nowrap ` +
-				`${SOLID_BUTTON_COLORS[color]} ${full ? "w-full" : ""} ${className}`
+				`${
+					disabled ? "bg-gray-100 text-gray-500 cursor-not-allowed" : SOLID_BUTTON_COLORS[color]
+				} ${full ? "w-full" : ""} ${className}`
 			}
+			disabled={disabled}
 			onClick={onClick}
 		>
-			{children}
+			{loading ? <PulseLoader color="white" size={7} /> : children}
 		</button>
 	);
 }
