@@ -12,8 +12,12 @@ export default function Features() {
 			<Feature name="Calendar">
 				Plan and automatically notify your team members of upcoming rehearsals and gigs.
 			</Feature>
-			<Feature name="Binders">Organize similar songs into binders.</Feature>
-			<Feature name="Sets">Create sets for performances and view them distraction free. </Feature>
+			<Feature name="Binders and sets">
+				Organize similar songs into binders and sets for performances.
+			</Feature>
+			<Feature name="Files">
+				Attach files like MP3s and sheet music to songs for team members to view.
+			</Feature>
 			<Feature name="Metronome">
 				Easily access a metronome when rehearsing a song. Manually set the tempo or tap to find the
 				tempo.

@@ -14,7 +14,12 @@ const starter = {
 	price: "Free",
 	recurrence: "",
 	description: "The essentials to make your life easier.",
-	features: ["Multiple team members", "Songs, binders and sets", "Metronome"],
+	features: [
+		"Multiple team members",
+		"Permissions and access control",
+		"Songs, binders and sets",
+		"Metronome",
+	],
 };
 
 const pro = {
@@ -23,10 +28,12 @@ const pro = {
 	recurrence: "/month",
 	features: [
 		"Multiple team members",
+		"Permissions and access control",
 		"Songs, binders and sets",
 		"Metronome",
 		"Calendar and notifications",
 		"Sticky notes",
+		"File management",
 	],
 	description: "The full tool suite to take planning to the next level.",
 };

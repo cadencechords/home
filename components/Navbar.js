@@ -5,7 +5,7 @@ import icon from "../public/icon.png";
 
 export default function Navbar() {
 	return (
-		<nav>
+		<nav className="mx-auto max-w-7xl px-4">
 			<div className="flex bg-white justify-between items-center container p-3 border-b min-w-full">
 				<Image src={icon} alt="Cadence icon" height={60} width={60} />
 				<div className="hidden md:block">

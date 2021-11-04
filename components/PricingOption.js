@@ -14,7 +14,7 @@ export default function PricingOption({ plan, buttonVariant }) {
 			<Subtext className="text-lg mb-6">{plan.description}</Subtext>
 			<div className="flex-grow text-gray-600 mb-6">
 				{plan.features.map((feature) => (
-					<div className="flex mb-4 last:mb-0 font-medium">
+					<div className="flex mb-4 last:mb-0 font-medium" key={feature}>
 						<CheckIcon className="w-6 h-6 text-green-500 mr-2" />
 						{feature}
 					</div>

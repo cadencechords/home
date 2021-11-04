@@ -23,10 +23,10 @@ export default function Home() {
 				<title>Cadence</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="mx-auto max-w-7xl px-4">
+			<div className="">
 				<Navbar />
 
-				<Section className="mt-5 md:mt-20">
+				<Section className="mt-5 md:mt-20 mx-auto max-w-7xl px-4">
 					<div className="grid grid-cols-2 gap-8 items-center">
 						<div className="col-span-2 lg:col-span-1">
 							<Heading className="my-6">Song management for growing teams</Heading>
@@ -55,14 +55,14 @@ export default function Home() {
 					</div>
 				</Section>
 
-				<Section id="features">
+				<Section id="features" className="mx-auto max-w-7xl px-4">
 					<Heading size="md" className="text-center mb-8">
 						All-in-one Platform
 					</Heading>
 					<Features />
 				</Section>
 
-				<Section id="pricing">
+				<Section id="pricing" className="mx-auto max-w-7xl px-4">
 					<Heading className="mb-6">Pricing plans for teams of all sizes</Heading>
 					<Subtext className="text-xl max-w-4xl mb-16">
 						Choose an affordable plan that's packed with the best features for running rehearsals
@@ -71,7 +71,7 @@ export default function Home() {
 					<PricingOptions />
 				</Section>
 
-				<Section id="contact">
+				<Section id="contact" className="mx-auto max-w-7xl px-4">
 					<div className="grid grid-cols-2 gap-8 grid-">
 						<div className="col-span-2 lg:col-span-1 order-1 lg:order-2">
 							<Heading size="md">Send us a message</Heading>
