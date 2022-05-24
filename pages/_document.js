@@ -2,14 +2,17 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 export default class MyDocument extends Document {
-	render() {
-		return (
-			<Html>
-				<Head>
-					<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
+  render() {
+    return (
+      <Html>
+        <Head>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
@@ -17,20 +20,24 @@ export default class MyDocument extends Document {
                                 page_path: window.location.pathname,
                                 });
                             `,
-						}}
-					/>
-					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-					<link
-						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap"
-						rel="stylesheet"
-					/>
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+            }}
+          />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
