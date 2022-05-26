@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import Button from "../components/Button";
-import ContactForm from "../components/ContactForm";
-import Features from "../components/Features";
-import Head from "next/head";
-import Heading from "../components/Heading";
-import Image from "next/image";
-import Input from "../components/Input";
-import Link from "next/link";
-import Navbar from "../components/Navbar";
-import PricingOptions from "../components/PricingOptions";
-import Section from "../components/Section";
-import Subtext from "../components/Subtext";
-import screenshotSongsPage from "../public/screenshot_of_songs_page.JPG";
-import Script from "next/script";
+import Button from '../components/Button';
+import ContactForm from '../components/ContactForm';
+import Features from '../components/Features';
+import Head from 'next/head';
+import Heading from '../components/Heading';
+import Image from 'next/image';
+import Input from '../components/Input';
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import PricingOptions from '../components/PricingOptions';
+import Section from '../components/Section';
+import Subtext from '../components/Subtext';
+import screenshotSongsPage from '../public/screenshot_of_songs_page.JPG';
+import Script from 'next/script';
 
 export default function Home() {
-  const [signupEmail, setSignupEmail] = useState("");
-
   useEffect(() => {
-    window?.Beacon("init", "20725009-764e-4e99-ae85-d6b7fa9eb452");
+    window?.Beacon('init', '20725009-764e-4e99-ae85-d6b7fa9eb452');
   }, []);
 
   return (
@@ -48,16 +46,15 @@ export default function Home() {
                 Easily share and collaborate with your band members.
               </Subtext>
               <div className="flex items-center">
-                <Input
-                  placeholder={"Email"}
-                  onChange={setSignupEmail}
-                  value={signupEmail}
-                  className="mr-4 flex-grow"
-                />
-                <Link
-                  href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup?email=${signupEmail}`}
-                >
-                  <Button className="mr-4">Sign up</Button>
+                <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
+                  <Button className="mr-4" full={true}>
+                    Sign up for free
+                  </Button>
+                </Link>
+                <Link href="https://demo.cadencechords.com">
+                  <Button variant="light" full={true} className="ml-4">
+                    Try the demo
+                  </Button>
                 </Link>
               </div>
             </div>
