@@ -5,19 +5,21 @@ import ContactForm from '../components/ContactForm';
 import Features from '../components/Features';
 import Head from 'next/head';
 import Heading from '../components/Heading';
-import Image from 'next/image';
-import Input from '../components/Input';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import PricingOptions from '../components/PricingOptions';
 import Section from '../components/Section';
 import Subtext from '../components/Subtext';
-import screenshotSongsPage from '../public/screenshot_of_songs_page.JPG';
 import Script from 'next/script';
+import HeroImages from '../components/HeroImages';
+import Rellax from 'rellax';
+import TeamFeaturesPreview from '../components/TeamFeaturesPreview';
+import SyncSection from '../components/SyncSection';
 
 export default function Home() {
   useEffect(() => {
     window?.Beacon('init', '20725009-764e-4e99-ae85-d6b7fa9eb452');
+    var rellax = new Rellax('.rellax');
   }, []);
 
   return (
@@ -36,8 +38,8 @@ export default function Home() {
         <Navbar />
 
         <Section className="mt-5 md:mt-20 mx-auto max-w-7xl px-4">
-          <div className="grid grid-cols-2 gap-8 items-center">
-            <div className="col-span-2 lg:col-span-1">
+          <div className="flex flex-wrap items-center">
+            <div className="w-full md:w-5/12 md:pr-8 mb-8 md:mb-0">
               <Heading className="my-6">
                 Song management for growing teams
               </Heading>
@@ -58,24 +60,30 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative lg:h-[800px] col-span-2 lg:col-span-1">
-              <div className="ml-auto bg-gray-50 rounded-lg w-96 h-full hidden lg:block"></div>
-              <div className="shadow-lg rounded-md w-full lg:absolute lg:top-10 lg:mr-3">
-                <Image
-                  src={screenshotSongsPage}
-                  className="rounded-md w-full"
-                />
-              </div>
-            </div>
+            <HeroImages />
           </div>
         </Section>
+        {/* 
+        <Section className="mx-auto max-w-7xl px-4">
+          <FeaturesPreview />
+        </Section> */}
 
-        <Section id="features" className="mx-auto max-w-7xl px-4">
-          <Heading size="md" className="text-center mb-8">
-            All-in-one Platform
-          </Heading>
-          <Features />
+        <Section className="mx-auto max-w-7xl px-4 mt-20">
+          <TeamFeaturesPreview />
         </Section>
+
+        <Section className="mx-auto max-w-7xl px-4 mt-20">
+          <SyncSection />
+        </Section>
+
+        <div className="bg-gray-50">
+          <Section id="features" className="mx-auto max-w-7xl px-4 py-10">
+            <Heading size="md" className="text-center mb-8">
+              All-in-one Platform
+            </Heading>
+            <Features />
+          </Section>
+        </div>
 
         <Section id="pricing" className="mx-auto max-w-7xl px-4">
           <Heading className="mb-6">
