@@ -80,7 +80,7 @@ export default function Home() {
           <SyncSection />
         </Section>
 
-        <Section id="pricing" className="px-8 mx-auto max-w-screen-2xl">
+        <Section id="pricing" className="z-30 px-8 mx-auto max-w-screen-2xl">
           <Heading className="mb-6">
             Pricing plans for teams of all sizes
           </Heading>

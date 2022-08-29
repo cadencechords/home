@@ -28,9 +28,9 @@ export default function SyncSection() {
       <img
         src={iphoneImage.src}
         width={1000}
-        className="absolute top-0 hidden text-center rellax md:block"
+        className="absolute top-0 z-10 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
-        data-rellax-speed="-2"
+        data-rellax-speed="-1"
         alt="Picture of iPhone with Cadence logo"
       />
       <img
