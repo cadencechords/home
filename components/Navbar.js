@@ -27,8 +27,8 @@ export default function Navbar() {
         ` ${isScrolled ? 'border-b h-16' : ''}`
       }
     >
-      <div className="mx-auto max-w-7xl px-4 w-full">
-        <div className="flex justify-between items-center container px-3 min-w-full">
+      <div className="w-full px-4 mx-auto max-w-7xl">
+        <div className="container flex items-center justify-between min-w-full px-3">
           <Image src={icon} alt="Cadence icon" height={60} width={45} />
           <div className="hidden md:block">
             <Link href="#features">
@@ -49,14 +49,18 @@ export default function Navbar() {
           </div>
           <div>
             <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}`}>
-              <Button variant="text" color="gray" className="mr-4">
-                Login
-              </Button>
+              <a>
+                <Button variant="text" color="gray" className="mr-4">
+                  Login
+                </Button>
+              </a>
             </Link>
             <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
-              <Button variant="solid" color="blue">
-                Sign up
-              </Button>
+              <a>
+                <Button variant="solid" color="blue">
+                  Sign up
+                </Button>
+              </a>
             </Link>
           </div>
         </div>
