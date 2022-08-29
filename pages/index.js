@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 import Button from '../components/Button';
-import ContactForm from '../components/ContactForm';
 import Head from 'next/head';
 import Heading from '../components/Heading';
 import Link from 'next/link';
@@ -16,6 +15,7 @@ import SyncSection from '../components/SyncSection';
 import FeaturesSection from '../components/FeaturesSection';
 import DescriptionSection from '../components/DescriptionSection';
 import Footer from '../components/Footer';
+import LogoImage from '../public/logo.png';
 
 export default function Home() {
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Home() {
           content="Cadence is a music management platform that helps your organize,
           collaborate and perform with your band."
         />
-        <meta name="twitter:url" content="https://cadencechords.com/icon.png" />
+        <meta name="twitter:url" content="/logo.png" />
         <meta name="twitter:card" content="summary">
           Cadence is a music management platform that helps your organize,
           collaborate and perform with your band.
@@ -61,10 +61,7 @@ export default function Home() {
           property="og:description"
           content="Cadence is a music management platform that helps your organize, collaborate and perform with your band."
         />
-        <meta
-          property="og:image"
-          content="https://cadencechords.com/icon.png"
-        />
+        <meta property="og:image" content="/icon.png" />
         <meta property="og:url" content="https://cadencechords.com" />
       </Head>
       <div className="">
