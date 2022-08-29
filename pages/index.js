@@ -34,6 +34,11 @@ export default function Home() {
       <Head>
         <title>Cadence</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Cadence is a music management platform that helps your organize, collaborate and perform with your band."
+        />
+        <meta name="title" content="Cadence | Song Mangement for Musicians" />
       </Head>
       <div className="">
         <Navbar />
