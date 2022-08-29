@@ -47,10 +47,7 @@ export default function Home() {
           collaborate and perform with your band."
         />
         <meta name="twitter:url" content="/icon.png" />
-        <meta name="twitter:card" content="summary">
-          Cadence is a music management platform that helps your organize,
-          collaborate and perform with your band.
-        </meta>
+        <meta name="twitter:card" content="summary" />
         <meta
           property="og:title"
           content="Cadence | Song Mangement for Musicians"
