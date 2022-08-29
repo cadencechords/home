@@ -15,7 +15,6 @@ import SyncSection from '../components/SyncSection';
 import FeaturesSection from '../components/FeaturesSection';
 import DescriptionSection from '../components/DescriptionSection';
 import Footer from '../components/Footer';
-import LogoImage from '../public/logo.png';
 
 export default function Home() {
   useEffect(() => {
