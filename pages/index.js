@@ -15,6 +15,7 @@ import SyncSection from '../components/SyncSection';
 import FeaturesSection from '../components/FeaturesSection';
 import DescriptionSection from '../components/DescriptionSection';
 import Footer from '../components/Footer';
+import LogoMetaImage from '../public/logo_meta.png';
 
 export default function Home() {
   useEffect(() => {
@@ -46,7 +47,7 @@ export default function Home() {
           content="Cadence is a music management platform that helps you organize,
           collaborate and perform with your band."
         />
-        <meta name="twitter:url" content="/logo_meta.png" />
+        <meta name="twitter:url" content={LogoMetaImage.src} />
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:title"
@@ -56,7 +57,7 @@ export default function Home() {
           property="og:description"
           content="Cadence is a music management platform that helps you organize, collaborate and perform with your band."
         />
-        <meta property="og:image" content="/logo_meta.png" />
+        <meta property="og:image" content={LogoMetaImage.src} />
         <meta property="og:url" content="https://cadencechords.com" />
       </Head>
       <div className="">
