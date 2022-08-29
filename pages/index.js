@@ -36,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Cadence is a music management platform that helps you organize, collaborate and perform with your band."
+          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta
           name="twitter:title"
@@ -44,8 +44,7 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Cadence is a music management platform that helps you organize,
-          collaborate and perform with your band."
+          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta name="twitter:url" content={LogoMetaImage.src} />
         <meta name="twitter:card" content="summary" />
@@ -55,7 +54,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Cadence is a music management platform that helps you organize, collaborate and perform with your band."
+          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta property="og:image" content={LogoMetaImage.src} />
         <meta property="og:url" content="https://cadencechords.com" />
