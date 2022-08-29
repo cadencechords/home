@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 export default class MyDocument extends Document {
@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
                             `,
             }}
           />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
