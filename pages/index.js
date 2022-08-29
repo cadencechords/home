@@ -32,13 +32,40 @@ export default function Home() {
         }}
       />
       <Head>
-        <title>Cadence</title>
+        <title>Cadence | Song Mangement for Musicians</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Cadence is a music management platform that helps your organize, collaborate and perform with your band."
         />
+        <meta
+          name="twitter:title"
+          content="Cadence | Song Mangement for Musicians"
+        />
+        <meta
+          name="twitter:description"
+          content="Cadence is a music management platform that helps your organize,
+          collaborate and perform with your band."
+        />
+        <meta name="twitter:url" content="https://cadencechords.com/icon.png" />
+        <meta name="twitter:card" content="summary">
+          Cadence is a music management platform that helps your organize,
+          collaborate and perform with your band.
+        </meta>
         <meta name="title" content="Cadence | Song Mangement for Musicians" />
+        <meta
+          property="og:title"
+          content="Cadence | Song Mangement for Musicians"
+        />
+        <meta
+          property="og:description"
+          content="Cadence is a music management platform that helps your organize, collaborate and perform with your band."
+        />
+        <meta
+          property="og:image"
+          content="https://cadencechords.com/icon.png"
+        />
+        <meta property="og:url" content="https://cadencechords.com" />
       </Head>
       <div className="">
         <Navbar />
