@@ -30,7 +30,7 @@ export default function SyncSection() {
         width={1000}
         className="absolute top-0 z-10 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
-        data-rellax-speed="-1"
+        data-rellax-speed="-1.5"
         alt="Picture of iPhone with Cadence logo"
       />
       <img
