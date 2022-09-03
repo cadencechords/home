@@ -1,5 +1,5 @@
 import React from 'react';
-import SyncFeatureImage from '../public/sync_blurred.png';
+import SyncFeatureImage from '../public/sync.png';
 import iphoneImage from '../public/iphone_cadence.png';
 import ipadImage from '../public/ipad_cadence.png';
 import macbookImage from '../public/macbook_cadence.png';

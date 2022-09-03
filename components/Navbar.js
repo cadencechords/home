@@ -3,9 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import icon from '../public/icon.png';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+  const currentRoute = router.asPath;
+
   useEffect(() => {
     let scrollListener = function () {
       if (window.scrollY > 0 && !isScrolled) {
@@ -31,19 +35,22 @@ export default function Navbar() {
         <div className="container flex items-center justify-between min-w-full px-3">
           <Image src={icon} alt="Cadence icon" height={60} width={45} />
           <div className="hidden md:block">
-            <Link href="#features">
-              <Button variant="text" color="gray" className="mr-2">
+            <Link href="/#features">
+              <Button
+                variant="text"
+                color={currentRoute === '/#features' ? 'blue' : 'gray'}
+                className="mr-2"
+              >
                 Features
               </Button>
             </Link>
-            <Link href="#pricing">
-              <Button variant="text" color="gray" className="mr-2">
+            <Link href="/#pricing">
+              <Button
+                variant="text"
+                color={currentRoute === '/#pricing' ? 'blue' : 'gray'}
+                className="mr-2"
+              >
                 Pricing
-              </Button>
-            </Link>
-            <Link href="#contact">
-              <Button variant="text" color="gray">
-                Contact
               </Button>
             </Link>
           </div>
