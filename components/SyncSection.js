@@ -30,7 +30,7 @@ export default function SyncSection() {
         width={1000}
         className="absolute top-0 z-10 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
-        data-rellax-speed="-1.5"
+        data-rellax-speed="-0.6"
         alt="Picture of iPhone with Cadence logo"
       />
       <img
@@ -38,7 +38,7 @@ export default function SyncSection() {
         width={1000}
         className="absolute top-0 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
-        data-rellax-speed="1.2"
+        data-rellax-speed=".4"
         alt="Picture of iPad with Cadence logo"
       />
       <img
@@ -46,7 +46,7 @@ export default function SyncSection() {
         width={1000}
         className="absolute top-0 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
-        data-rellax-speed="-1"
+        data-rellax-speed="0"
         alt="Picture of Macbook with Cadence logo"
       />
     </div>
