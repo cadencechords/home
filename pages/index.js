@@ -129,7 +129,7 @@ export default function Home() {
           </div>
         </Section> */}
       </div>
-      <Section>
+      <Section className="px-8 mx-auto max-w-screen-2xl">
         <Footer />
       </Section>
     </div>
