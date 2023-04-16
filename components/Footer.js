@@ -3,6 +3,10 @@ import React from 'react';
 import LogoImage from '../public/icon.png';
 import DownloadOnAppStoreButton from './DownloadOnAppStoreButton';
 import DownloadOnGooglePlayButton from './DownloadOnGooglePlay';
+import SocialLink from './SocialLink';
+import TwitterSvg from '../public/twitter.svg';
+import InstagramSvg from '../public/instagram.svg';
+import FacebookSvg from '../public/facebook.svg';
 
 export default function Footer() {
   return (
@@ -19,6 +23,20 @@ export default function Footer() {
             <div className="w-full mt-1 sm:ml-2 sm:mt-0">
               <DownloadOnGooglePlayButton />
             </div>
+          </div>
+          <div className="flex gap-5 mt-8">
+            <SocialLink
+              image={FacebookSvg}
+              url="https://www.facebook.com/cadencechords"
+            ></SocialLink>
+            <SocialLink
+              image={InstagramSvg}
+              url="https://www.instagram.com/cadencechords/"
+            ></SocialLink>
+            <SocialLink
+              image={TwitterSvg}
+              url="https://twitter.com/CadenceSupport"
+            ></SocialLink>
           </div>
         </div>
       </div>
