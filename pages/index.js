@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar';
 import PricingOptions from '../components/PricingOptions';
 import Section from '../components/Section';
 import Subtext from '../components/Subtext';
-import Script from 'next/script';
 import HeroImages from '../components/HeroImages';
 import Rellax from 'rellax';
 import SyncSection from '../components/SyncSection';
@@ -62,7 +61,7 @@ export default function Home() {
       <div className="">
         <Navbar />
 
-        <Section className="px-8 mx-auto mt-5 md:mt-20 max-w-screen-2xl">
+        <Section className="max-w-screen-xl px-8 mx-auto mt-5 md:mt-20">
           <div className="flex flex-wrap items-center">
             <div className="w-full mb-8 lg:w-1/2 md:pr-8 md:mb-0">
               <Heading className="md:leading-tight">
@@ -92,19 +91,19 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section className="px-8 mx-auto my-20 max-w-screen-2xl">
+        <Section className="max-w-screen-xl px-8 mx-auto my-20">
           <DescriptionSection />
         </Section>
 
-        <Section className="px-8 mx-auto max-w-screen-2xl">
+        <Section className="max-w-screen-xl px-8 mx-auto">
           <FeaturesSection />
         </Section>
 
-        <Section className="px-8 mx-auto mt-20 max-w-screen-2xl">
+        <Section className="max-w-screen-xl px-8 mx-auto mt-20">
           <SyncSection />
         </Section>
 
-        <Section id="pricing" className="z-30 px-8 mx-auto max-w-screen-2xl">
+        <Section id="pricing" className="z-30 max-w-screen-xl px-8 mx-auto">
           <Heading className="mb-6">
             Pricing plans for teams of all sizes
           </Heading>
@@ -115,21 +114,8 @@ export default function Home() {
           </Subtext>
           <PricingOptions />
         </Section>
-
-        {/* <Section id="contact" className="px-8 mx-auto max-w-screen-2xl">
-          <div className="grid grid-cols-2 gap-8 grid-">
-            <div className="order-1 col-span-2 lg:col-span-1 lg:order-2">
-              <Heading size="md">Send us a message</Heading>
-              <Subtext className="mt-4">
-                If you have any questions or you'd like to learn more before
-                signing up, feel free to contact us!
-              </Subtext>
-            </div>
-            <ContactForm className="order-2 col-span-2 lg:col-span-1 lg:order-1" />
-          </div>
-        </Section> */}
       </div>
-      <Section className="px-8 mx-auto max-w-screen-2xl">
+      <Section className="max-w-screen-xl px-8 mx-auto">
         <Footer />
       </Section>
     </div>
