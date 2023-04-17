@@ -61,7 +61,7 @@ export default function Home() {
       <div className="">
         <Navbar />
 
-        <Section className="max-w-screen-xl px-8 mx-auto mt-5 md:mt-20">
+        <Section className="max-w-screen-xl px-4 mx-auto mt-5 md:px-8 md:mt-20">
           <div className="flex flex-wrap items-center">
             <div className="w-full mb-8 lg:w-1/2 md:pr-8 md:mb-0">
               <Heading className="md:leading-tight">
@@ -91,19 +91,22 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section className="max-w-screen-xl px-8 mx-auto my-20">
+        <Section className="max-w-screen-xl px-4 mx-auto my-20 md:px-8">
           <DescriptionSection />
         </Section>
 
-        <Section className="max-w-screen-xl px-8 mx-auto">
+        <Section className="max-w-screen-xl px-4 mx-auto md:px-8">
           <FeaturesSection />
         </Section>
 
-        <Section className="max-w-screen-xl px-8 mx-auto mt-20">
+        <Section className="max-w-screen-xl px-4 mx-auto mt-20 md:px-8">
           <SyncSection />
         </Section>
 
-        <Section id="pricing" className="z-30 max-w-screen-xl px-8 mx-auto">
+        <Section
+          id="pricing"
+          className="z-30 max-w-screen-xl px-4 mx-auto md:px-8"
+        >
           <Heading className="mb-6">
             Pricing plans for teams of all sizes
           </Heading>
@@ -115,7 +118,7 @@ export default function Home() {
           <PricingOptions />
         </Section>
       </div>
-      <Section className="max-w-screen-xl px-8 mx-auto">
+      <Section className="max-w-screen-xl px-4 mx-auto md:px-8">
         <Footer />
       </Section>
     </div>

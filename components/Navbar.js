@@ -39,7 +39,7 @@ export default function Navbar() {
               <Button
                 variant="text"
                 color={currentRoute === '/#features' ? 'blue' : 'gray'}
-                className="mr-2"
+                className="w-24 mr-2"
               >
                 Features
               </Button>
@@ -48,7 +48,7 @@ export default function Navbar() {
               <Button
                 variant="text"
                 color={currentRoute === '/#pricing' ? 'blue' : 'gray'}
-                className="mr-2"
+                className="w-24 mr-2"
               >
                 Pricing
               </Button>
@@ -57,14 +57,14 @@ export default function Navbar() {
           <div>
             <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}`}>
               <a>
-                <Button variant="text" color="gray" className="mr-4">
+                <Button variant="text" color="gray" className="w-24 mr-4">
                   Login
                 </Button>
               </a>
             </Link>
             <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
               <a>
-                <Button variant="solid" color="blue">
+                <Button variant="solid" color="blue" className="w-24">
                   Sign up
                 </Button>
               </a>

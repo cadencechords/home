@@ -7,6 +7,7 @@ import SocialLink from './SocialLink';
 import TwitterSvg from '../public/twitter.svg';
 import InstagramSvg from '../public/instagram.svg';
 import FacebookSvg from '../public/facebook.svg';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -24,7 +25,7 @@ export default function Footer() {
               <DownloadOnGooglePlayButton />
             </div>
           </div>
-          <div className="flex gap-5 mt-8">
+          <div className="flex gap-5 my-8">
             <SocialLink
               image={FacebookSvg}
               url="https://www.facebook.com/cadencechords"
@@ -38,6 +39,11 @@ export default function Footer() {
               url="https://twitter.com/CadenceSupport"
             ></SocialLink>
           </div>
+          <Link href="/contact">
+            <a className="text-gray-600 cursor-pointer hover:underline">
+              Contact us
+            </a>
+          </Link>
         </div>
       </div>
     </div>
