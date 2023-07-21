@@ -62,7 +62,10 @@ export default function Navbar() {
                 </Button>
               </a>
             </Link>
-            <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
+            <Link
+              href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}
+              className="signup"
+            >
               <a>
                 <Button variant="solid" color="blue" className="w-24">
                   Sign up
