@@ -66,11 +66,8 @@ export default function Home() {
                 from practice to performance.
               </Subtext>
               <div className="flex items-center mt-8">
-                <Link
-                  href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}
-                  className="signup"
-                >
-                  <a className="w-full mr-3 lg:w-48">
+                <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
+                  <a className="w-full mr-3 lg:w-48 signup">
                     <Button full={true}>Sign up for free</Button>
                   </a>
                 </Link>

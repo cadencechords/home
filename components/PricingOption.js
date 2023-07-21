@@ -20,11 +20,8 @@ export default function PricingOption({ plan, buttonVariant }) {
           </div>
         ))}
       </div>
-      <Link
-        href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}
-        className="signup"
-      >
-        <a>
+      <Link href={`${process.env.NEXT_PUBLIC_WEBAPP_URL}/signup`}>
+        <a className="signup">
           <Button variant={buttonVariant} full>
             Get started
           </Button>
