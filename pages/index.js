@@ -71,13 +71,6 @@ export default function Home() {
                     <Button full={true}>Sign up for free</Button>
                   </a>
                 </Link>
-                <Link href="https://demo.cadencechords.com">
-                  <a className="w-full ml-3 lg:w-48">
-                    <Button variant="light" full={true}>
-                      Try the demo
-                    </Button>
-                  </a>
-                </Link>
               </div>
             </div>
             <HeroImages />
