@@ -31,18 +31,10 @@ export default function FeaturesCarousel({ selectedFeature }) {
 
   return (
     <>
-      <motion.img
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: 100, opacity: 0 }}
-        transition={{
-          x: { type: 'spring', stiffness: 300, damping: 30 },
-          opacity: { duration: 0.1 },
-        }}
+      <img
         src={getImageUrl()}
         key={getImageUrl()}
         width={350}
-        style={{ height: 'fit-content' }}
         alt="Picture of iPhone showing off Cadence features"
       />
     </>
