@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import CalendarFeatureImage from '../public/calendar_feature.png';
 import InviteTeamFeatureImage from '../public/invite_team_feature.png';
 import MetronomeFeatureImage from '../public/metronome_feature.png';
