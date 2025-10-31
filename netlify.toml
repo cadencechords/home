@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://cadencechords.com/*"
+  to = "https://mezzochords.com/:splat"
+  status = 301
+  force = true
