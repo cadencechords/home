@@ -34,7 +34,7 @@ export default function FeaturesCarousel({ selectedFeature }) {
         src={getImageUrl()}
         key={getImageUrl()}
         width={350}
-        alt="Picture of iPhone showing off Cadence features"
+        alt="Picture of iPhone showing off Mezzo features"
       />
     </>
   );

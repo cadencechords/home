@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="flex justify-center w-full">
         <div className="flex flex-col items-center w-full">
           <div className="flex items-center justify-center w-16 mb-10">
-            <Image src={LogoImage} alt="Cadence icon" height={128} width={96} />
+            <Image src={LogoImage} alt="Mezzo icon" height={128} width={96} />
           </div>
           <div className="flex flex-col w-full sm:w-auto sm:flex-row">
             <div className="w-full mb-1 sm:mr-2 sm:mb-0">
@@ -28,15 +28,15 @@ export default function Footer() {
           <div className="flex gap-5 my-8">
             <SocialLink
               image={FacebookSvg}
-              url="https://www.facebook.com/cadencechords"
+              url="https://www.facebook.com/mezzochords"
             ></SocialLink>
             <SocialLink
               image={InstagramSvg}
-              url="https://www.instagram.com/cadencechords/"
+              url="https://www.instagram.com/mezzochords/"
             ></SocialLink>
             <SocialLink
               image={TwitterSvg}
-              url="https://twitter.com/CadenceSupport"
+              url="https://twitter.com/MezzoSupport"
             ></SocialLink>
           </div>
           <Link href="/contact">

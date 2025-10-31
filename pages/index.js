@@ -24,32 +24,32 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Cadence | Song Mangement for Musicians</title>
+        <title>Mezzo | Song Mangement for Musicians</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
+          content="Mezzo is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta
           name="twitter:title"
-          content="Cadence | Song Mangement for Musicians"
+          content="Mezzo | Song Mangement for Musicians"
         />
         <meta
           name="twitter:description"
-          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
+          content="Mezzo is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta name="twitter:url" content={LogoMetaImage.src} />
         <meta name="twitter:card" content="summary" />
         <meta
           property="og:title"
-          content="Cadence | Song Mangement for Musicians"
+          content="Mezzo | Song Mangement for Musicians"
         />
         <meta
           property="og:description"
-          content="Cadence is a music management platform that helps you and your band organize, collaborate and perform with confidence."
+          content="Mezzo is a music management platform that helps you and your band organize, collaborate and perform with confidence."
         />
         <meta property="og:image" content={LogoMetaImage.src} />
-        <meta property="og:url" content="https://cadencechords.com" />
+        <meta property="og:url" content="https://mezzochords.com" />
       </Head>
       <div className="">
         <Navbar />
@@ -61,7 +61,7 @@ export default function Home() {
                 Song Management for Musicians like You
               </Heading>
               <Subtext className="mt-6 text-xl">
-                Cadence is a music management platform that provides everything
+                Mezzo is a music management platform that provides everything
                 your band needs to efficiently play together - taking your songs
                 from practice to performance.
               </Subtext>

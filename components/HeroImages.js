@@ -13,7 +13,7 @@ export default function HeroImages() {
           className="sm:max-w-md"
           width={'640px'}
           height={'800px'}
-          alt="Picture of Cadence on two phones"
+          alt="Picture of Mezzo on two phones"
         />
       </div>
       <div
@@ -26,14 +26,14 @@ export default function HeroImages() {
           className="absolute top-0 right-0 min-w-full rellax"
           data-rellax-speed="-1.6"
           data-disable-parallax-down="md"
-          alt="Picture of Cadence usage on iPhone"
+          alt="Picture of Mezzo usage on iPhone"
         />
         <img
           src={iphone_1.src}
           className="absolute top-0 right-0 min-w-full pt-10 rellax md:mt-8"
           data-rellax-speed="1.6"
           data-disable-parallax-down="md"
-          alt="Picture of Cadence usage on iPhone"
+          alt="Picture of Mezzo usage on iPhone"
         />
       </div>
     </div>

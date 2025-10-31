@@ -13,7 +13,7 @@ export default function SyncSection() {
       <div className="z-20 mb-8 md:absolute md:top-0 md:right-0 md:mb-0">
         <Heading className="mb-4 text-left md:text-right">Sync</Heading>
         <Subtext className="max-w-xl text-xl text-left md:text-2xl md:leading-relaxed md:text-right">
-          Changes you make will automatically reflect across Cadence. You don't
+          Changes you make will automatically reflect across Mezzo. You don't
           have to worry about syncing your team's and your devices.
         </Subtext>
       </div>
@@ -22,7 +22,7 @@ export default function SyncSection() {
           src={SyncFeatureImage.src}
           width={1537}
           height={1183}
-          alt="Picture of iPhone, iPad and Macbook with Cadence logo"
+          alt="Picture of iPhone, iPad and Macbook with Mezzo logo"
         />
       </div>
       <img
@@ -31,7 +31,7 @@ export default function SyncSection() {
         className="absolute top-0 z-10 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
         data-rellax-speed="-0.6"
-        alt="Picture of iPhone with Cadence logo"
+        alt="Picture of iPhone with Mezzo logo"
       />
       <img
         src={ipadImage.src}
@@ -39,7 +39,7 @@ export default function SyncSection() {
         className="absolute top-0 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
         data-rellax-speed=".4"
-        alt="Picture of iPad with Cadence logo"
+        alt="Picture of iPad with Mezzo logo"
       />
       <img
         src={macbookImage.src}
@@ -47,7 +47,7 @@ export default function SyncSection() {
         className="absolute top-0 hidden text-center rellax md:block"
         data-rellax-percentage="0.5"
         data-rellax-speed="0"
-        alt="Picture of Macbook with Cadence logo"
+        alt="Picture of Macbook with Mezzo logo"
       />
     </div>
   );

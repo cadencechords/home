@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div className="w-full px-4 mx-auto max-w-7xl">
         <div className="container flex items-center justify-between min-w-full px-3">
-          <Image src={icon} alt="Cadence icon" height={60} width={45} />
+          <Image src={icon} alt="Mezzo icon" height={60} width={45} />
           <div className="hidden md:block">
             <Link href="/#features">
               <Button
